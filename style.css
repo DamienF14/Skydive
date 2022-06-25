@@ -10,16 +10,29 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
 
     overflow: hidden;
 }
 
+@font-face {
+    font-family: edcarz;
+    src: url(font/Eczar[wght].ttf);
+}
+
 .plane {
     width: 5rem;
-    margin-top: 5%;
+    /*margin-top: 5%;*/
     margin-left: -10rem;
+    align-self: flex-start;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: edcarz;
 }
 
 /*

@@ -14,7 +14,7 @@ anime({
     duration: 9000,
     easing: 'linear',
     loop: true,
-    delay: 500
+    //delay: 500
 });
 
 function getPlaneLeftPosition() {
