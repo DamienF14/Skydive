@@ -5,7 +5,8 @@ html {
 
 body {
     margin: 0;
-    background-color: rgb(106, 191, 212);
+    background-color: rgb(149, 228, 248);
+    /*background: linear-gradient(to bottom, #38a3d1  0%, #a5e3fc 100%);*/
 
     display: flex;
     flex-direction: column;
@@ -16,14 +17,25 @@ body {
 }
 
 .plane {
-    /*background-color: rgb(163, 61, 61);*/
     width: 5rem;
     margin-top: 5%;
     margin-left: -10rem;
 }
 
+/*
+.grass {
+    height: 2rem;
+    width: 100%;
+    margin-top: -1.9rem;
+    background-image: url("images/grass_draw.png");
+    background-repeat: repeat-x;
+    background-size: 3rem 2rem;
+    z-index: 1;
+    position: relative;
+}*/
+
 .ground {
-    background-color: gray;
+    background-color: #535353;
     width: 100%;
     height: 5%;
     margin-top: auto;

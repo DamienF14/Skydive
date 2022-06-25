@@ -14,7 +14,7 @@ anime({
     duration: 9000,
     easing: 'linear',
     loop: true,
-    //delay: 500
+    delay: 500
 });
 
 function getPlaneLeftPosition() {
@@ -65,8 +65,9 @@ function generateSkyMoveX() {
 }
 
 function createSkydiver() {
-  var newSkydiver = document.createElement("img");
-  newSkydiver.src = 'images/skydiver.svg';
+  var newSkydiver = document.createElement("object");
+  newSkydiver.type = "image/svg+xml";
+  newSkydiver.data = 'images/skydiver.svg';
   newSkydiver.classList.add("skydiver");
   
   var skydiverName = "skydiver" + skydiverNb;
@@ -85,6 +86,15 @@ function createSkydiver() {
   newSkydiver.style.position = 'absolute';
   newSkydiver.style.left = getPlaneLeftPosition() + randomLaunch + 'px';
   newSkydiver.style.top = getPlaneTopPosition() + 'px';
+
+  newSkydiver.addEventListener("load",function(){
+    var svgDoc = newSkydiver.contentDocument;
+
+    var randomColor = "#"+Math.floor(Math.random()*16777215).toString(16);
+
+    var elements = svgDoc.getElementsByClassName("parachute");
+    for (var i = 0; i < elements.length; i++) elements[i].style.fill = randomColor;
+}, false);
 
   anime({
     targets: skydiverID,
